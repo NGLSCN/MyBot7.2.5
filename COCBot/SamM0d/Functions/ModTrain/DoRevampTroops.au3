@@ -242,8 +242,9 @@ EndFunc
 
 Func CheckNeedSwipe($TrainTroop)
 	; check need swipe
-	Local $iSwipeNum = 15
-;~ 	Local $iSwipeNum = 13
+	Local $iSwipeNum = 13
+;~ 	Local $iSwipeNum = 15
+
 	Local $iCount = 0
 	If $TrainTroop > $iSwipeNum Then
 		$iCount = 0
@@ -266,102 +267,47 @@ Func CheckNeedSwipe($TrainTroop)
 EndFunc
 
 Func getTroopCost($trooptype)
-;~ 	If $isIceWizardAvailable <> 1 Then ; Check if santa spell variable is not set YET
-;~ 		ForceCaptureRegion()
-;~ 		Local $_IsIceWizardPixel[4] = [357, 513, 0xD0AF98, 20]
-;~ 		Local $rPixelCheck = _CheckPixel($_IsIceWizardPixel, True)
-
-;~ 		If $rPixelCheck = True Then
-;~ 			$isIceWizardAvailable = 1
-;~ 		Else
-;~ 			$isIceWizardAvailable = 0
-;~ 		EndIf
-;~ 	EndIf
 	Local $iResult = 0
-;~ 	If $isIceWizardAvailable = 1 Then
-;~ 	Switch $trooptype
-;~ 		Case "Heal"
-;~ 			$iResult = getMyOcr(424,450,60,16,"troopcost",True)
-;~ 		Case "Drag"
-;~ 			$iResult = getMyOcr(424,552,60,16,"troopcost",True)
-;~ 		Case "Pekk"
-;~ 			$iResult = getMyOcr(522,450,60,16,"troopcost",True)
-;~ 		Case "BabyD"
-;~ 			$iResult = getMyOcr(522,552,60,16,"troopcost",True)
-;~ 		Case "Mine"
-;~ 			$iResult = getMyOcr(620,450,60,16,"troopcost",True)
-
-;~ 		Case "Mini"
-;~ 			$iResult = getMyOcr(725,450,60,16,"troopcost",True)
-;~ 		Case "Hogs"
-;~ 			$iResult = getMyOcr(725,552,60,16,"troopcost",True)
-
-;~ 		Case "Valk"
-;~ 			$iResult = getMyOcr(548,450,60,16,"troopcost",True)
-;~ 		Case "Gole"
-;~ 			$iResult = getMyOcr(548,552,60,16,"troopcost",True)
-
-
-;~ 		Case "Barb"
-;~ 			$iResult = getMyOcr(30,450,60,16,"troopcost",True)
-;~ 		Case "Arch"
-;~ 			$iResult = getMyOcr(30,552,60,16,"troopcost",True)
-;~ 		Case "Giant"
-;~ 			$iResult = getMyOcr(128,450,60,16,"troopcost",True)
-;~ 		Case "Gobl"
-;~ 			$iResult = getMyOcr(128,552,60,16,"troopcost",True)
-;~ 		Case "Wall"
-;~ 			$iResult = getMyOcr(226,450,60,16,"troopcost",True)
-;~ 		Case "Ball"
-;~ 			$iResult = getMyOcr(226,552,60,16,"troopcost",True)
-
-;~ 		Case "Wiza"
-;~ 			$iResult = getMyOcr(325,450,60,16,"troopcost",True)
-
-;~ 		Case "Witc"
-;~ 			$iResult = getMyOcr(648,450,60,16,"troopcost",True)
-;~ 		Case "Lava"
-;~ 			$iResult = getMyOcr(648,552,60,16,"troopcost",True)
-;~ 		Case "Bowl"
-;~ 			$iResult = getMyOcr(747,450,60,16,"troopcost",True)
-
-;~ 	EndSwitch
-
-;~ 	Else
 	Switch $trooptype
 		Case "Barb"
 			$iResult = getMyOcr(0,35,450,60,16,"troopcost",True,False,True)
-		Case "Arch"
+		Case "Pumpkin"
 			$iResult = getMyOcr(0,35,552,60,16,"troopcost",True,False,True)
-		Case "Giant"
+		Case "Arch"
 			$iResult = getMyOcr(0,134,450,60,16,"troopcost",True,False,True)
-		Case "Gobl"
+		Case "Giant"
 			$iResult = getMyOcr(0,134,552,60,16,"troopcost",True,False,True)
-		Case "Wall"
+		Case "GiantSkeleton"
 			$iResult = getMyOcr(0,233,450,60,16,"troopcost",True,False,True)
-		Case "Ball"
+		Case "Golb"
 			$iResult = getMyOcr(0,233,552,60,16,"troopcost",True,False,True)
-		Case "Wiza"
+		Case "Wall"
 			$iResult = getMyOcr(0,332,450,60,16,"troopcost",True,False,True)
-		Case "Heal"
+		Case "Ball"
 			$iResult = getMyOcr(0,332,552,60,16,"troopcost",True,False,True)
-		Case "Drag"
+		Case "Wiza"
 			$iResult = getMyOcr(0,431,450,60,16,"troopcost",True,False,True)
-		Case "Pekk"
+		Case "Heal"
 			$iResult = getMyOcr(0,431,552,60,16,"troopcost",True,False,True)
-		Case "BabyD"
+		Case "Drag"
 			$iResult = getMyOcr(0,530,450,60,16,"troopcost",True,False,True)
-		Case "Mine"
+		Case "Pekk"
 			$iResult = getMyOcr(0,530,552,60,16,"troopcost",True,False,True)
 
+		Case "BabyD"
+			$iResult = getMyOcr(0,622,450,60,16,"troopcost",True,False,True)
+		Case "Mine"
+			$iResult = getMyOcr(0,622,552,60,16,"troopcost",True,False,True)
+
 		Case "Mini"
-			$iResult = getMyOcr(0,632,450,60,16,"troopcost",True,False,True)
-		Case "Hogs"
-			$iResult = getMyOcr(0,632,552,60,16,"troopcost",True,False,True)
-		Case "Valk"
 			$iResult = getMyOcr(0,731,450,60,16,"troopcost",True,False,True)
-		Case "Gole"
+		Case "Hogs"
 			$iResult = getMyOcr(0,731,552,60,16,"troopcost",True,False,True)
+
+		Case "Valk"
+			$iResult = getMyOcr(0,551,450,60,16,"troopcost",True,False,True)
+		Case "Gole"
+			$iResult = getMyOcr(0,551,552,60,16,"troopcost",True,False,True)
 		Case "Witc"
 			$iResult = getMyOcr(0,648,450,60,16,"troopcost",True,False,True)
 		Case "Lava"
@@ -370,7 +316,50 @@ Func getTroopCost($trooptype)
 			$iResult = getMyOcr(0,747,450,60,16,"troopcost",True,False,True)
 
 	EndSwitch
-;~ 	EndIf
+
+;~ 	Switch $trooptype
+;~ 		Case "Barb"
+;~ 			$iResult = getMyOcr(0,35,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Arch"
+;~ 			$iResult = getMyOcr(0,35,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Giant"
+;~ 			$iResult = getMyOcr(0,134,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Gobl"
+;~ 			$iResult = getMyOcr(0,134,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Wall"
+;~ 			$iResult = getMyOcr(0,233,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Ball"
+;~ 			$iResult = getMyOcr(0,233,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Wiza"
+;~ 			$iResult = getMyOcr(0,332,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Heal"
+;~ 			$iResult = getMyOcr(0,332,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Drag"
+;~ 			$iResult = getMyOcr(0,431,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Pekk"
+;~ 			$iResult = getMyOcr(0,431,552,60,16,"troopcost",True,False,True)
+;~ 		Case "BabyD"
+;~ 			$iResult = getMyOcr(0,530,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Mine"
+;~ 			$iResult = getMyOcr(0,530,552,60,16,"troopcost",True,False,True)
+
+;~ 		Case "Mini"
+;~ 			$iResult = getMyOcr(0,632,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Hogs"
+;~ 			$iResult = getMyOcr(0,632,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Valk"
+;~ 			$iResult = getMyOcr(0,731,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Gole"
+;~ 			$iResult = getMyOcr(0,731,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Witc"
+;~ 			$iResult = getMyOcr(0,648,450,60,16,"troopcost",True,False,True)
+;~ 		Case "Lava"
+;~ 			$iResult = getMyOcr(0,648,552,60,16,"troopcost",True,False,True)
+;~ 		Case "Bowl"
+;~ 			$iResult = getMyOcr(0,747,450,60,16,"troopcost",True,False,True)
+
+;~ 	EndSwitch
+
 	If $g_iSamM0dDebug = 1 Then SetLog("$iResult: " & $iResult)
 	If $iResult = "" Then $iResult = 0
 	Return $iResult
